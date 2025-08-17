@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickYTDownload - Fast & Free YouTube Video Downloader</title>
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="QuickyTDowload - Free YouTube Downloader">
+    <meta property="og:description" content="Download YouTube videos & MP3 audio in HD. Fast & free.">
+    <meta property="og:url" content="https://quickytdownload.com/">
+    <meta property="og:image" content="{% static 'images/thumbnail.png' %}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QuickyTDowload - Free YouTube Downloader">
+    <meta name="twitter:description" content="Download YouTube videos & MP3 audio in HD. Fast & free.">
+    <meta name="twitter:image" content="{% static 'images/thumbnail.png' %}">
+    <link rel="icon" type="image/png" href="image/yvd-logo.webp">
+    <meta name="keywords" content="YouTube downloader, download YouTube videos, MP4 YouTube download, YouTube to MP3, 720p downloader, monetize YouTube channel, YouTube Partner Program, YouTube earnings, AdSense, affiliate marketing">
+    <meta name="description" content="Download YouTube videos in MP4, MP3, 720p, or 360p fast and free. Learn how to earn money from YouTube and monetize your channel using AdSense, affiliate marketing, and more. Best YouTube downloader and monetization guide 2025.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="image/logo.webp" alt="YouTube Downloader logo with red play button icon on white background" class="h-8 w-8 logo">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-red-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Features</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">FAQ</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <div class="flex space-x-4">
+                        <!-- <button class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-moon"></i>
+                        </button> -->
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 flex items-center">
+                            <i class="fas fa-crown mr-2"></i>
+                            Go Premium
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-red-50 border-red-500 text-red-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Features</a>
+                <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <div class="mt-2 ml-3">
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Premium</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white py-12 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/2 mb-8 md:mb-0 mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Download YouTube Videos <span class="block text-red-200">in All Formats</span></h1>
+                    <p class="text-lg md:text-xl mb-6 text-center w-25">Fast, free, and unlimited downloads without any registration required. Supports MP4, MP3, WEBM and more.</p>
+                    <div class="mt-8 sm:flex sm:justify-center lg:justify-center">
+                        <div class="rounded-md shadow">
+                            <a href="#download-section" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:-translate-y-1">
+                                <i class="fas fa-bolt mr-2"></i>
+                                Start Downloading
+                            </a>
+                        </div>
+                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                            <a href="#features" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10 transition duration-300">
+                                <i class="fas fa-star mr-2"></i>
+                                How It Works
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-red-100 text-sm mx-auto text-center">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <span>100% Safe & Secure · No Registration Required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div id="downloader" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+           <div class="lg:text-center mb-10">
+                <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">Downloader</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Lightning Fast Downloads
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Get videos in any format with our powerful download engine
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <label for="youtube-url" class="block text-sm font-medium text-gray-700 mb-1">
+                            <span class="bg-red-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">NEW</span>Enter YouTube URL to begin</label>
+                        <div class="grid sm:grid-cols-6 rounded-md shadow-sm">
+                            <input type="text" id="youtube-url" class="sm:col-span-5 px-4 py-3 rounded-l-md border focus:ring-2 focus:ring-red-500 focus:border-red-500" placeholder="https://www.youtube.com/watch?v=...">
+                            <button id="paste-btn" class="justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-r-md flex items-center">
+                                <i class="fas fa-paste mr-2"></i> Paste
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button id="fetch-btn" class=" btn bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-md font-semibold flex items-center justify-center">
+                        <span id="fetch-btn-text">
+                            <i class="fas fa-download mr-2"></i>Get Download Options</span>
+                        <span id="fetch-btn-spinner" class="hidden ml-2">
+                            <i class="fas fa-spinner spinner"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">No Registration</p>
+                            <p class="text-xs text-gray-500">Start downloading immediately</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-bolt text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">Super Fast</p>
+                            <p class="text-xs text-gray-500">High speed downloads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Video Info Section -->
+            <div id="video-info" class="hidden max-w-3xl mx-auto mt-8">
+                <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="md:w-1/3">
+                        <img id="video-thumbnail" src="" alt="Video thumbnail" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h3 id="video-title" class="text-xl font-bold mb-2"></h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-gray-600">
+                            <span id="video-duration" class="flex items-center">
+                                <i class="far fa-clock mr-1"></i> <span></span>
+                            </span>
+                            <span id="video-views" class="flex items-center">
+                                <i class="far fa-eye mr-1"></i> <span></span>
+                            </span>
+                            <span id="video-channel" class="flex items-center">
+                                <i class="far fa-user-circle mr-1"></i> <span></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Download Options Section -->
+            <div id="download-options" class="hidden max-w-3xl mx-auto mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-center">Available Download Options</h3>
+                
+                <!-- MP4 Video Options -->
+                <div class="mb-8 download-option bg-white rounded-lg shadow-md overflow-hidden transition">
+                    <div class="bg-red-50 px-4 py-3 border-b border-gray-200">
+                        <h4 class="font-semibold text-lg text-red-700 flex items-center">
+                            <i class="fas fa-film mr-2"></i> Video Formats (MP4)
+                        </h4>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quality</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Size</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">FPS</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mp4-options" class="bg-white divide-y divide-gray-200">
+                                <!-- MP4 options will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- MP3 Audio Options -->
+                <div class="mb-8 download-option bg-white rounded-lg shadow-md overflow-hidden transition">
+                    <div class="bg-blue-50 px-4 py-3 border-b border-gray-200">
+                        <h4 class="font-semibold text-lg text-blue-700 flex items-center">
+                            <i class="fas fa-music mr-2"></i> Audio Formats (MP3)
+                        </h4>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quality</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Size</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mp3-options" class="bg-white divide-y divide-gray-200">
+                                <!-- MP3 options will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Other Formats -->
+                <div class="download-option bg-white rounded-lg shadow-md overflow-hidden transition">
+                    <div class="bg-green-50 px-4 py-3 border-b border-gray-200">
+                        <h4 class="font-semibold text-lg text-green-700 flex items-center">
+                            <i class="fas fa-file-alt mr-2"></i> Other Formats
+                        </h4>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Format</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quality</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Size</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="other-options" class="bg-white divide-y divide-gray-200">
+                                <!-- Other format options will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2">Why Choose Our Downloader</h2>
+            <p class="text-gray-600 text-center mb-12">The fastest and most reliable YouTube downloader online</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Super Fast Downloads</h3>
+                    <p class="text-gray-600">Our high-speed servers ensure your downloads complete in seconds, not minutes.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">100% Safe & Secure</h3>
+                    <p class="text-gray-600">No malware, no viruses. Your downloads are clean and your privacy is protected.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-mobile-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">All Devices Supported</h3>
+                    <p class="text-gray-600">Works on Windows, Mac, Android, and iOS without any app required.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-film text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Multiple Formats</h3>
+                    <p class="text-gray-600">Get videos in MP4, MP3, WebM, AVI, and more. Quality from 144p to 4K.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-cloud-download-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Unlimited Downloads</h3>
+                    <p class="text-gray-600">No limits, no restrictions, no waiting. Download as many videos as you want.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-headphones text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">High Quality Audio</h3>
+                    <p class="text-gray-600">Extract MP3 audio from videos at 128kbps, 192kbps or 320kbps quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2">How To Download YouTube Videos</h2>
+            <p class="text-gray-600 text-center mb-12">It's simple and takes just 3 steps</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Paste Video URL</h3>
+                    <p class="text-gray-600">Copy YouTube video link and paste it in the input field above</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Select Format</h3>
+                    <p class="text-gray-600">Choose from available video or audio formats to download</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Download & Enjoy</h3>
+                    <p class="text-gray-600">Click download button and save the file to your device</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About quickytdownload</h3>
+                    <p class="text-gray-400 mb-4">The fastest YouTube video downloader online. Save videos in multiple formats without registration.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">How It Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Supported Formats Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Supported Formats</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">MP4 Video (360p to 4K)</li>
+                        <li class="text-gray-400">MP3 Audio (128kbps to 320kbps)</li>
+                        <li class="text-gray-400">WebM (HD Quality)</li>
+                        <li class="text-gray-400">3GP (Mobile Format)</li>
+                        <li class="text-gray-400">M4A (Audio Format)</li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <!-- <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i> 
+                            <span>quickytdownload@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe mt-1 mr-2"></i> 
+                            <span>www.quickytdownload.com</span>
+                        </li>
+                    </ul> -->
+                    <div class="mt-4">
+                        <h4 class="font-semibold mb-2">Subscribe to Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l-md w-full text-gray-800 focus:outline-none">
+                            <button class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded-r-md">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="bg-gray-900 py-4">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">&copy; 2023 quickytdownload. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-2 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">DMCA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
