@@ -324,3 +324,23 @@ window.addEventListener("popstate", () => {
     hideArticle();
   }
 });
+// Mobile menu functionality
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  this.classList.toggle("active");
+  document.getElementById("mobile-menu").classList.toggle("open");
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.getElementById("menu-toggle");
+
+  if (
+    !menu.contains(event.target) &&
+    !toggle.contains(event.target) &&
+    menu.classList.contains("open")
+  ) {
+    menu.classList.remove("open");
+    toggle.classList.remove("active");
+  }
+});
