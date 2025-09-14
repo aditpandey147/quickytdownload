@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About QuickYTDownload - Free YouTube Video Downloader</title>
+    <meta name="description" content="QuickYTDownload is a free online tool that helps you download YouTube videos in high quality. Learn about our mission to provide a safe, fast, and easy-to-use YouTube downloader.">
+    <meta name="keywords" content="about quickytdownload, youtube downloader, video downloader, about us, youtube to mp3, youtube to mp4">
+    <meta name="author" content="QuickYTDownload Team">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="image/yvd-logo.svg">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.quickytdownload.com/abouthtml">
+    <meta property="og:title" content="About QuickYTDownload - Free YouTube Video Downloader">
+    <meta property="og:description" content="QuickYTDownload is a free online tool that helps you download YouTube videos in high quality. Learn about our mission to provide a safe, fast, and easy-to-use YouTube downloader.">
+    <meta property="og:image" content="https://www.quickytdownload.com/images/og-about-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.quickytdownload.com/about.html">
+    <meta property="twitter:title" content="About QuickYTDownload - Free YouTube Video Downloader">
+    <meta property="twitter:description" content="QuickYTDownload is a free online tool that helps you download YouTube videos in high quality. Learn about our mission to provide a safe, fast, and easy-to-use YouTube downloader.">
+    <meta property="twitter:image" content="https://www.quickytdownload.com/images/twitter-about-image.jpg">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About QuickYTDownload",
+      "description": "QuickYTDownload is a free online tool that helps you download YouTube videos in high quality.",
+      "url": "https://www.quickytdownload.com/about.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "QuickYTDownload",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.quickytdownload.com/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'youtube-red': '#FF0000',
+                        'dark-red': '#CC0000',
+                        'light-red': '#FF5A5A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(255, 255, 255, 0.507);
+            min-height: 100vh;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #CC0000, #FF0000, #FF5A5A);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="image/logo.png" alt="quickytdownload" class="">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="/" class="hover:text-youtube-red font-medium">Home</a></li>
+                        <li><a href="/blog.html" class="hover:text-youtube-red font-medium">Blog</a></li>
+                        <li><a href="/about.html" class="text-youtube-red font-medium">About</a></li>
+                        <li><a href="/" class="bg-youtube-red hover:bg-dark-red text-white py-2 px-4 rounded-lg font-medium">Download</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white pb-4">
+                <ul class="space-y-3">
+                    <li><a href="/" class="block py-2 px-4 hover:bg-gray-100 hover:text-youtube-red">Home</a></li>
+                    <li><a href="/blog.html" class="block py-2 px-4 bg-gray-100 hover:text-youtube-red">Blog</a></li>
+                    <li><a href="/about.html" class="block py-2 px-4 hover:bg-gray-100 text-youtube-red">About</a></li>
+                    <li><a href="/" class="block py-2 px-4 bg-youtube-red text-white rounded-lg mx-4 text-center mt-2">Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">About QuickYTDownload</h2>
+            <p class="text-xl max-w-3xl mx-auto">The fastest, most reliable YouTube video downloader designed with users in mind</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- App Description -->
+        <section class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="image/quickytdownload-about-image.jpg" alt="QuickYTDownload Interface" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">What is QuickYTDownload?</h2>
+                    <p class="text-lg mb-4">QuickYTDownload is a powerful web application that allows users to download their favorite YouTube videos quickly and easily. With a simple, intuitive interface, you can save videos in various formats and quality options.</p>
+                    <p class="text-lg mb-4">Our mission is to provide a seamless experience for users who want to access YouTube content offline, for education, entertainment, or personal use.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-youtube-red mr-2"></i> Fast downloading</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-youtube-red mr-2"></i> Multiple format support</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-youtube-red mr-2"></i> High-quality video downloads</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-youtube-red mr-2"></i> No registration required</li>
+                    </ul>
+                    <button class="bg-youtube-red hover:bg-dark-red text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Try It Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Information -->
+        <section class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Developed by DNP Infotech</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">About DNP Infotech</h3>
+                    <p class="text-lg mb-4">DNP Infotech is a leading software development company specializing in creating innovative web and mobile applications. With years of experience in the tech industry, we deliver high-quality solutions tailored to our clients' needs.</p>
+                    <p class="text-lg mb-4">Our team of skilled developers and designers work together to create user-friendly applications that solve real-world problems. QuickYTDownload is one of our many successful projects.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-laptop-code text-youtube-red text-2xl mr-3"></i>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-youtube-red text-2xl mr-3"></i>
+                            <span>App Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-paint-brush text-youtube-red text-2xl mr-3"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-server text-youtube-red text-2xl mr-3"></i>
+                            <span>Cloud Solutions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+                    <img src="image/quickyt-download-image-dnp.jpg" alt="DNP Infotech Office" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-bolt text-4xl text-youtube-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Lightning Fast</h3>
+                    </div>
+                    <p>Download YouTube videos in seconds with our optimized technology. No waiting, no delays.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shield-alt text-4xl text-youtube-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Safe & Secure</h3>
+                    </div>
+                    <p>We prioritize your privacy and security. No personal data is stored on our servers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-thumbs-up text-4xl text-youtube-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">User Friendly</h3>
+                    </div>
+                    <p>Simple interface that makes downloading videos easy for everyone, regardless of technical skill.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">What Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Content Creator</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"I use QuickYTDownload daily for my work. It's the most reliable YouTube downloader I've found. Great job DNP Infotech!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Teacher</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"I download educational videos for my classroom. QuickYTDownload makes it so easy and the quality is always excellent."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">About quickytdownload</h3>
+            <p class="text-gray-400 mb-4">
+              The fastest YouTube video downloader online. Save videos in
+              multiple formats without registration.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Features</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Supported Formats Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Supported Formats</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-400">MP4 Video (360p to 4K)</li>
+              <li class="text-gray-400">MP3 Audio (128kbps to 320kbps)</li>
+              <li class="text-gray-400">WebM (HD Quality)</li>
+              <li class="text-gray-400">3GP (Mobile Format)</li>
+              <li class="text-gray-400">M4A (Audio Format)</li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <!-- <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i> 
+                            <span>quickytdownload@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe mt-1 mr-2"></i> 
+                            <span>www.quickytdownload.com</span>
+                        </li>
+                    </ul> -->
+            <div class="mt-4">
+              <h4 class="font-semibold mb-2">Subscribe to Newsletter</h4>
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="px-3 py-2 rounded-l-md w-full text-gray-800 focus:outline-none"
+                />
+                <button
+                  class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded-r-md"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="bg-gray-900 py-4">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">
+              &copy; 2023 quickytdownload. All rights reserved.
+            </p>
+            <div class="flex space-x-6 mt-2 md:mt-0">
+              <a href="#" class="text-gray-400 hover:text-white text-sm"
+                >Privacy Policy</a
+              >
+              <a href="#" class="text-gray-400 hover:text-white text-sm"
+                >Terms of Service</a
+              >
+              <a href="#" class="text-gray-400 hover:text-white text-sm"
+                >DMCA</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

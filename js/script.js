@@ -1,14 +1,23 @@
-// Mobile menu toggle
-document
-  .getElementById("mobile-menu-button")
-  .addEventListener("click", function () {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
-    this.setAttribute(
-      "aria-expanded",
-      menu.classList.contains("hidden") ? "false" : "true"
-    );
-  });
+// Mobile menu functionality
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  this.classList.toggle("active");
+  document.getElementById("mobile-menu").classList.toggle("open");
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.getElementById("menu-toggle");
+
+  if (
+    !menu.contains(event.target) &&
+    !toggle.contains(event.target) &&
+    menu.classList.contains("open")
+  ) {
+    menu.classList.remove("open");
+    toggle.classList.remove("active");
+  }
+});
 
 // Extract YouTube video ID from URL
 function extractVideoId(url) {
@@ -262,3 +271,15 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "youtube-red": "#FF0000",
+        "dark-red": "#CC0000",
+        "light-red": "#FF5A5A",
+      },
+    },
+  },
+};
